@@ -1,2 +1,1 @@
-// Need to add a storysource preset here
-module.exports = [];
+module.exports = ['@storybook/addon-docs/react/preset'];
