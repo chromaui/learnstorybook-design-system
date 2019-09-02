@@ -1,38 +1,45 @@
-import React from 'react';
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
 import { Avatar } from './Avatar';
 
-export default {
-  title: 'Design System|Avatar',
+<Meta
+  title="Design System|Avatar"
+  component={Avatar}
+/>
 
-  parameters: {
-    component: Avatar,
-    componentSubtitle: 'Displays an image that represents a user or organization',
-  },
-};
+## Avatar Component
+#### Displays an image that represents a user or organization
 
-export const large = () => (
-  <div>
-    <Avatar loading size="large" />
-    <Avatar size="large" username="Tom Coleman" />
-    <Avatar
-      size="large"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-  </div>
-);
+Use an avatar for attributing actions or content to specific users.
 
-export const medium = () => (
+_The user’s name should always be present when using Avatar – either printed beside the avatar or in a tooltip._
+
+<Preview>
+  <Story name="large">
+    <div>
+      <Avatar loading size="large" />
+      <Avatar size="large" username="Tom Coleman" />
+      <Avatar
+        size="large"
+        username="Tom Coleman"
+        src="https://avatars2.githubusercontent.com/u/132554"
+      />
+    </div>
+  </Story>
+</Preview>
+
+<Props of="." />
+
+<Story name="medium">
   <div>
     <Avatar loading />
     <Avatar username="Tom Coleman" />
     <Avatar username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
   </div>
-);
+</Story>
 
-export const small = () => (
+<Story name="small">
   <div>
     <Avatar loading size="small" />
     <Avatar size="small" username="Dominic Nguyen" />
@@ -42,9 +49,9 @@ export const small = () => (
       src="https://avatars2.githubusercontent.com/u/263385"
     />
   </div>
-);
+</Story>
 
-export const tiny = () => (
+<Story name="tiny">
   <div>
     <Avatar loading size="tiny" />
     <Avatar size="tiny" username="Dominic Nguyen" />
@@ -54,17 +61,13 @@ export const tiny = () => (
       src="https://avatars2.githubusercontent.com/u/263385"
     />
   </div>
-);
+</Story>
 
-export const knobs = () => (
+<Story name="knobs" parameters={{decorators: [withKnobs]}}>
   <Avatar
     loading={boolean('Loading')}
     size={select('Size', ['tiny', 'small', 'medium', 'large'])}
     username="Dominic Nguyen"
     src="https://avatars2.githubusercontent.com/u/263385"
   />
-);
-
-knobs.story = {
-  decorators: [withKnobs],
-};
+</Story>
