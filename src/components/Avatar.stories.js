@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
