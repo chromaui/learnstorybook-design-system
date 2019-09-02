@@ -8,6 +8,7 @@ export default {
 
   parameters: {
     component: Avatar,
+    componentSubtitle: 'Displays an image that represents a user or organization',
   },
 };
 
@@ -43,6 +44,7 @@ export const sizes = () => (
     />
   </div>
 );
+sizes.story = { parameters: { docs: { storyDescription: '4 sizes are supported.' } } };
 
 export const initials = () => (
   <div>
@@ -52,6 +54,14 @@ export const initials = () => (
     <Avatar username="Michael Shilman" />
   </div>
 );
+initials.story = {
+  parameters: {
+    docs: {
+      storyDescription:
+        'When no image is supplied to the `src` prop, Avatar displays initials. Avatar should be used sparingly in situations without access to images.',
+    },
+  },
+};
 
 export const loading = () => (
   <div>
@@ -61,18 +71,13 @@ export const loading = () => (
     <Avatar size="tiny" loading />
   </div>
 );
-
-export const large = () => (
-  <div>
-    <Avatar loading size="large" />
-    <Avatar size="large" username="Tom Coleman" />
-    <Avatar
-      size="large"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-  </div>
-);
+loading.story = {
+  parameters: {
+    docs: {
+      storyDescription: 'The loading state is used when the image or username is, well, loading.',
+    },
+  },
+};
 
 export const knobs = () => (
   <Avatar
