@@ -22,3 +22,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: yarn test
+      - run: yarn chromatic test -a 2wix88i1ziu --exit-zero-on-changes
