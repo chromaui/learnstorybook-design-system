@@ -1301,6 +1301,25 @@
     prop-types "^15.7.2"
     qs "^6.6.0"
 
+"@storybook/addon-storysource@^5.2.0-rc.2":
+  version "5.2.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-5.2.0-rc.2.tgz#bebc67dde19412200045f723babc6a7bb869caf0"
+  integrity sha512-L8xGQ0aefDigtQpFzhncYuel/mP+d09q3dI0ltE2g0xEBJx76CWQBDlmorC6fKVsITToyoUYJ2hFYteq9xv0JQ==
+  dependencies:
+    "@storybook/addons" "5.2.0-rc.2"
+    "@storybook/components" "5.2.0-rc.2"
+    "@storybook/router" "5.2.0-rc.2"
+    "@storybook/source-loader" "5.2.0-rc.2"
+    "@storybook/theming" "5.2.0-rc.2"
+    core-js "^3.0.1"
+    estraverse "^4.2.0"
+    loader-utils "^1.2.3"
+    prettier "^1.16.4"
+    prop-types "^15.7.2"
+    react-syntax-highlighter "^8.0.1"
+    regenerator-runtime "^0.12.1"
+    util-deprecate "^1.0.2"
+
 "@storybook/addons@5.2.0-rc.2", "@storybook/addons@^5.2.0-rc.2":
   version "5.2.0-rc.2"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.2.0-rc.2.tgz#f142ea19d6e77139803f04f7b7a7ae57a4356eeb"
@@ -1538,6 +1557,21 @@
     lodash "^4.17.11"
     memoizerific "^1.11.3"
     qs "^6.6.0"
+
+"@storybook/source-loader@5.2.0-rc.2":
+  version "5.2.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0-rc.2.tgz#5df4358d86112a048e988f1d79ce03cc2e98dd1e"
+  integrity sha512-HFvXgjX8v+Y6CyratRod/qBcbI5fLJXdMwdLAPxHkb3q9vJvuEAeMKjJuOhzGlA5rPJU4ys/MRBUulBhS8X4Xg==
+  dependencies:
+    "@storybook/addons" "5.2.0-rc.2"
+    "@storybook/router" "5.2.0-rc.2"
+    core-js "^3.0.1"
+    estraverse "^4.2.0"
+    global "^4.3.2"
+    loader-utils "^1.2.3"
+    prettier "^1.16.4"
+    prop-types "^15.7.2"
+    regenerator-runtime "^0.12.1"
 
 "@storybook/theming@5.2.0-rc.2":
   version "5.2.0-rc.2"
@@ -9798,7 +9832,7 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-prettier@^1.18.2:
+prettier@^1.16.4, prettier@^1.18.2:
   version "1.18.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
   integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
