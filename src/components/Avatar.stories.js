@@ -8,6 +8,7 @@ export default {
 
   parameters: {
     component: Avatar,
+    componentSubtitle: 'Displays an image that represents a user or organization',
   },
 };
 
