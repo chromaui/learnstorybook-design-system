@@ -1264,7 +1264,7 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
-"@storybook/addon-knobs@5.2.0-rc.2":
+"@storybook/addon-knobs@5.2.0-rc.2", "@storybook/addon-knobs@^5.2.0-rc.2":
   version "5.2.0-rc.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-5.2.0-rc.2.tgz#184526807b92c4ccce1fbf716a87f164eb691ba8"
   integrity sha512-rv82Ly4LFrGqBb0dZbCLkV+1QYhJCKMcs/8x13kfyu++rNT75X6TEbeIQmrufTzU+kqIon9FHbN0hohFIh8xYQ==
