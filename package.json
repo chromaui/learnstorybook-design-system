@@ -1,7 +1,7 @@
 {
   "name": "learnstorybook-design-system",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/cli": "^7.5.5",
     "polished": "^3.4.1",
@@ -48,5 +48,10 @@
     "@storybook/react": "^5.2.0-rc.2",
     "prettier": "^1.18.2",
     "storybook-chromatic": "^2.2.2"
-  }
+  },
+  "description": "Learn Storybook design system",
+  "main": "dist/index.js",
+  "repository": "https://github.com/chromaui/learnstorybook-design-system.git",
+  "author": "Tom Coleman <tom@thesnail.org>",
+  "license": "MIT"
 }
