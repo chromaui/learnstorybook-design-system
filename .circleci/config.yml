@@ -23,3 +23,8 @@ jobs:
 
       - run: yarn test
       - run: yarn chromatic test -a 2wix88i1ziu --exit-zero-on-changes
+      - run: |
+          if [ $CIRCLE_BRANCH = "master" ]
+          then
+            yarn release
+          fi
