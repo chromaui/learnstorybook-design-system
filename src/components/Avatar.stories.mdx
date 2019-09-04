@@ -1,72 +1,91 @@
-import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, select, boolean } from '@storybook/addon-knobs';
+import { Meta, Story, Props } from "@storybook/addon-docs/blocks";
+import { withKnobs, select, boolean } from "@storybook/addon-knobs";
 
-import { Avatar } from './Avatar';
+import { Avatar } from "./Avatar";
 
-<Meta
-  title="Design System|Avatar"
-  component={Avatar}
-/>
+<Meta title="Design System|Avatar" component={Avatar} />
 
-## Avatar Component
-#### Displays an image that represents a user or organization
+# Avatar
 
-Use an avatar for attributing actions or content to specific users.
+## TODO: make this a subtitle Displays an image that represents a user or organization
 
-_The user’s name should always be present when using Avatar – either printed beside the avatar or in a tooltip._
+Use an avatar for attributing actions or content to specific users. The user’s name should _always_ be present when using Avatar – either printed beside the avatar or in a tooltip.
 
 <Preview>
-  <Story name="large">
-    <div>
-      <Avatar loading size="large" />
-      <Avatar size="large" username="Tom Coleman" />
-      <Avatar
-        size="large"
-        username="Tom Coleman"
-        src="https://avatars2.githubusercontent.com/u/132554"
-      />
-    </div>
+  <Story name="standard">
+    <Avatar
+      size="large"
+      username="Tom Coleman"
+      src="https://avatars2.githubusercontent.com/u/132554"
+    />
   </Story>
 </Preview>
 
 <Props of="." />
 
-<Story name="medium">
-  <div>
-    <Avatar loading />
-    <Avatar username="Tom Coleman" />
-    <Avatar username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
-  </div>
-</Story>
+## Usage
 
-<Story name="small">
+Avatar is used to represent a person or an organization. By default the avatar shows an image and gracefully falls back to the first initial of the username. While hydrating the component you may find it useful to render a skeleton template to indicate that Avatar is awaiting data. Avatars can be grouped with the AvatarList component.
+
+### Sizes
+
+4 sizes are supported.
+
+<Story name="sizes">
   <div>
-    <Avatar loading size="small" />
-    <Avatar size="small" username="Dominic Nguyen" />
+    <Avatar
+      size="large"
+      username="Tom Coleman"
+      src="https://avatars2.githubusercontent.com/u/132554"
+    />
+    <Avatar
+      size="medium"
+      username="Tom Coleman"
+      src="https://avatars2.githubusercontent.com/u/132554"
+    />
     <Avatar
       size="small"
-      username="Dominic Nguyen"
-      src="https://avatars2.githubusercontent.com/u/263385"
+      username="Tom Coleman"
+      src="https://avatars2.githubusercontent.com/u/132554"
     />
-  </div>
-</Story>
-
-<Story name="tiny">
-  <div>
-    <Avatar loading size="tiny" />
-    <Avatar size="tiny" username="Dominic Nguyen" />
     <Avatar
       size="tiny"
-      username="Dominic Nguyen"
-      src="https://avatars2.githubusercontent.com/u/263385"
+      username="Tom Coleman"
+      src="https://avatars2.githubusercontent.com/u/132554"
     />
   </div>
 </Story>
 
-<Story name="knobs" parameters={{decorators: [withKnobs]}}>
+### Initials
+
+When no image is supplied to the `src` prop Avatar displays initials. Avatar should be used sparingly in situations without access to images.
+
+<Story name="initials">
+  <div>
+    <Avatar username="Tom Coleman" />
+    <Avatar username="Dominic Nguyen" />
+    <Avatar username="Kyle Suss" />
+    <Avatar username="Michael Shilman" />
+  </div>
+</Story>
+
+### Loading
+
+The loading state is used when the image or username is, well, loading.
+
+<Story name="loading">
+  <div>
+    <Avatar size="large" loading />
+    <Avatar size="medium" loading />
+    <Avatar size="small" loading />
+    <Avatar size="tiny" loading />
+  </div>
+</Story>
+
+<Story name="knobs" parameters={{ decorators: [withKnobs] }}>
   <Avatar
-    loading={boolean('Loading')}
-    size={select('Size', ['tiny', 'small', 'medium', 'large'])}
+    loading={boolean("Loading")}
+    size={select("Size", ["tiny", "small", "medium", "large"])}
     username="Dominic Nguyen"
     src="https://avatars2.githubusercontent.com/u/263385"
   />

@@ -77,9 +77,6 @@ export const noLabels = () => (
   </List>
 );
 
-noLabels.story = {
-  name: 'no labels',
-};
 
 export const inline = () => (
   <Fragment>
