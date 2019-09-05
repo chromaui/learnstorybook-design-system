@@ -1,7 +1,8 @@
-import { Meta, Story, Props } from "@storybook/addon-docs/blocks";
-import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
-import { Avatar } from "./Avatar";
+import { Avatar } from './Avatar';
+import * as stories from './Avatar.stories';
 
 <Meta title="Design System|Avatar" component={Avatar} />
 
@@ -12,13 +13,7 @@ import { Avatar } from "./Avatar";
 Use an avatar for attributing actions or content to specific users. The user’s name should _always_ be present when using Avatar – either printed beside the avatar or in a tooltip.
 
 <Preview>
-  <Story name="standard">
-    <Avatar
-      size="large"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-  </Story>
+  <Story name="large">{() => stories.large()}</Story>
 </Preview>
 
 <Props of="." />
@@ -82,11 +77,6 @@ The loading state is used when the image or username is, well, loading.
   </div>
 </Story>
 
-<Story name="knobs" parameters={{ decorators: [withKnobs] }}>
-  <Avatar
-    loading={boolean("Loading")}
-    size={select("Size", ["tiny", "small", "medium", "large"])}
-    username="Dominic Nguyen"
-    src="https://avatars2.githubusercontent.com/u/263385"
-  />
+<Story name="knobs" parameters={{ decorators: [withKnobs], docs: { disable: false } }}>
+  {() => stories.knobs()}
 </Story>
