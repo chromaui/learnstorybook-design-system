@@ -17,6 +17,7 @@
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook -s public --docs",
     "changelog": "auto changelog && git reset HEAD^ && $EDITOR ./CHANGELOG.md && git commit -am ‘Updated changelog for `auto version` [skip ci]’",
     "version": "npm version `auto version` -m ‘Bump version to %s [skip ci]’",
     "publish": "npm publish && git push --follow-tags",
