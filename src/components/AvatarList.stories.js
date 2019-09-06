@@ -32,3 +32,13 @@ export default {
 };
 
 export const short = () => <AvatarList users={users.slice(0, 2)} />;
+
+export const smallSize = () => <AvatarList users={users.slice(0, 2)} size="small" />;
+
+export const loading = () => <AvatarList loading />;
+
+export const ellipsized = () => <AvatarList users={users} />;
+
+export const bigUserCount = () => <AvatarList users={users} userCount={100} />;
+
+export const empty = () => <AvatarList users={[]} />;
