@@ -1,26 +1,29 @@
-import React from 'react';
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
 import { Avatar } from './Avatar';
 
-export default {
-  title: 'Design System|Avatar',
+<Meta title="Design System|Avatar" component={Avatar} />
 
-  parameters: {
-    component: Avatar,
-    componentSubtitle: 'Displays an image that represents a user or organization',
-  },
-};
+# Avatar
 
-export const standard = () => (
+## Displays an image that represents a user or organization
+
+Use an avatar for attributing actions or content to specific users. The user’s name should _always_ be present when using Avatar – either printed beside the avatar or in a tooltip.
+
+<Story name="standard">
   <Avatar
     size="large"
     username="Tom Coleman"
     src="https://avatars2.githubusercontent.com/u/132554"
   />
-);
+</Story>
 
-export const sizes = () => (
+### Sizes
+
+4 sizes are supported.
+
+<Story name="sizes">
   <div>
     <Avatar
       size="large"
@@ -43,51 +46,43 @@ export const sizes = () => (
       src="https://avatars2.githubusercontent.com/u/132554"
     />
   </div>
-);
-sizes.story = { parameters: { docs: { storyDescription: '4 sizes are supported.' } } };
+</Story>
 
-export const initials = () => (
+### Default Values
+
+When no image is supplied to the `src` prop, Avatar displays initials. Avatar should be used sparingly in situations without access to images.
+
+<Story name="initials">
   <div>
     <Avatar username="Tom Coleman" />
     <Avatar username="Dominic Nguyen" />
     <Avatar username="Kyle Suss" />
     <Avatar username="Michael Shilman" />
   </div>
-);
-initials.story = {
-  parameters: {
-    docs: {
-      storyDescription:
-        'When no image is supplied to the `src` prop, Avatar displays initials. Avatar should be used sparingly in situations without access to images.',
-    },
-  },
-};
+</Story>
 
-export const loading = () => (
+### Loading
+
+The loading state is used when the image or username is, well, loading.
+
+<Story name="loading">
   <div>
     <Avatar size="large" loading />
     <Avatar size="medium" loading />
     <Avatar size="small" loading />
     <Avatar size="tiny" loading />
   </div>
-);
-loading.story = {
-  parameters: {
-    docs: {
-      storyDescription: 'The loading state is used when the image or username is, well, loading.',
-    },
-  },
-};
+</Story>
 
-export const knobs = () => (
+### Playground
+
+Experiment with this story with Knobs addon in Canvas mode.
+
+<Story name="knobs" parameters={{ decorators: [withKnobs] }}>
   <Avatar
     loading={boolean('Loading')}
     size={select('Size', ['tiny', 'small', 'medium', 'large'])}
     username="Dominic Nguyen"
     src="https://avatars2.githubusercontent.com/u/263385"
   />
-);
-
-knobs.story = {
-  decorators: [withKnobs],
-};
+</Story>
