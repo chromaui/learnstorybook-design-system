@@ -51,7 +51,7 @@
     "@storybook/react": "^5.3.19",
     "auto": "^7.4.3",
     "prettier": "^1.18.2",
-    "storybook-chromatic": "^2.2.2"
+    "chromatic": "^5.0.0"
   },
   "description": "Learn Storybook design system",
   "main": "dist/index.js",
