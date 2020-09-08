@@ -3,22 +3,21 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
-    "@babel/cli": "^7.5.5",
-    "polished": "^3.4.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "polished": "^3.6.6",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "build": "BABEL_ENV=production babel src -d dist",
-    "prepare": "npm run build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "build-storybook-docs": "build-storybook -s public --docs",
-    "release": "auto shipit"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,23 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@storybook/addon-a11y": "^5.2.1",
-    "@storybook/addon-actions": "^5.2.1",
-    "@storybook/addon-docs": "^5.2.1",
-    "@storybook/addon-knobs": "^5.2.1",
-    "@storybook/addon-links": "^5.2.1",
-    "@storybook/addons": "^5.2.1",
-    "@storybook/addon-storysource": "^5.2.1",
-    "@storybook/react": "^5.2.1",
-    "auto": "^7.4.3",
-    "prettier": "^1.18.2",
-    "storybook-chromatic": "^2.2.2"
-  },
-  "description": "Learn Storybook design system",
-  "main": "dist/index.js",
-  "repository": "https://github.com/chromaui/learnstorybook-design-system.git",
-  "author": "Tom Coleman <tom@thesnail.org>",
-  "license": "MIT"
+  }
 }

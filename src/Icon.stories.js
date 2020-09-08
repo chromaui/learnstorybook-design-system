@@ -49,7 +49,7 @@ const List = styled.ul`
 `;
 
 export default {
-  title: 'Design System|Icon',
+  title: 'Design System/Icon',
   component: Icon,
 };
 
@@ -77,18 +77,25 @@ export const noLabels = () => (
   </List>
 );
 
-noLabels.story = {
-  name: 'no labels',
+noLabels.storyName = 'no labels';
+
+export const inline = (args) => (
+  <Fragment>
+    this is an inline <Icon {...args} /> icon (default)
+  </Fragment>
+);
+inline.args={
+  icon:'facehappy',
+  "aria-label":'Happy face',
 };
 
-export const inline = () => (
+export const block = (args) =>(
   <Fragment>
-    this is an inline <Icon icon="facehappy" aria-label="Happy face" /> icon (default)
+    this is a block <Icon {...args} /> icon
   </Fragment>
 );
-
-export const block = () => (
-  <Fragment>
-    this is a block <Icon icon="facehappy" aria-label="Happy face" block /> icon
-  </Fragment>
-);
+block.args={
+  icon:'facehappy',
+  "aria-label":'Happy face',
+  block:true
+};

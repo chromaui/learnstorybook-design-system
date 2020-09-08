@@ -19,7 +19,7 @@ function ButtonWrapper(props) {
 }
 
 export default {
-  title: 'Design System|Button',
+  title: 'Design System/Button',
   component: Button,
 };
 
@@ -76,9 +76,7 @@ export const allButtons = () => (
   </div>
 );
 
-allButtons.story = {
-  name: 'all buttons',
-};
+allButtons.storyName= 'all buttons';
 
 export const buttonWrapper = () => (
   <div>
@@ -147,9 +145,7 @@ export const buttonWrapper = () => (
   </div>
 );
 
-buttonWrapper.story = {
-  name: 'button wrapper',
-};
+buttonWrapper.storyName='button wrapper';
 
 export const anchorWrapper = () => (
   <div>
@@ -294,6 +290,4 @@ export const anchorWrapper = () => (
   </div>
 );
 
-anchorWrapper.story = {
-  name: 'anchor wrapper',
-};
+anchorWrapper.storyName= 'anchor wrapper';
