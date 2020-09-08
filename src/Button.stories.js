@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { action } from '@storybook/addon-actions';
 
 import { Button } from './Button';
 import { Icon } from './Icon';
@@ -15,7 +14,7 @@ const CustomButton = styled.button`
 `;
 
 function ButtonWrapper(props) {
-  return <CustomButton onClick={action('button action click')} {...props} />;
+  return <CustomButton {...props}/>;
 }
 
 export default {
@@ -23,7 +22,7 @@ export default {
   component: Button,
 };
 
-export const allButtons = () => (
+export const AllButtons = (args) => (
   <div>
     <Button appearance="primary">Primary</Button>
     <Button appearance="secondary">Secondary</Button>
@@ -76,9 +75,9 @@ export const allButtons = () => (
   </div>
 );
 
-allButtons.storyName= 'all buttons';
+AllButtons.storyName= 'all buttons';
 
-export const buttonWrapper = () => (
+export const buttonWrapper = (args) => (
   <div>
     <ButtonWrapper>Original Button Wrapper</ButtonWrapper>
     <br />
@@ -147,7 +146,7 @@ export const buttonWrapper = () => (
 
 buttonWrapper.storyName='button wrapper';
 
-export const anchorWrapper = () => (
+export const AnchorWrapper = (args) => (
   <div>
     <StoryLinkWrapper to="http://storybook.js.org">Original Link Wrapper</StoryLinkWrapper>
     <br />
@@ -290,4 +289,4 @@ export const anchorWrapper = () => (
   </div>
 );
 
-anchorWrapper.storyName= 'anchor wrapper';
+AnchorWrapper.storyName= 'anchor wrapper';

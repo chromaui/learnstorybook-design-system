@@ -7,14 +7,14 @@ export default {
   component: Avatar,
 };
 
-export const standard = (args) => <Avatar {...args} />;
-standard.args = {
+export const Standard = (args) => <Avatar {...args} />;
+Standard.args = {
   size: "large",
   username: "Tom Coleman",
   src: "https://avatars2.githubusercontent.com/u/132554",
 };
 
-export const sizes = (args) => (
+export const Sizes = (args) => (
   <div>
     <Avatar {...args} size="large" />
     <Avatar {...args} size="medium" />
@@ -22,12 +22,12 @@ export const sizes = (args) => (
     <Avatar {...args} size="tiny" />
   </div>
 );
-sizes.args = {
+Sizes.args = {
   username: "Tom Coleman",
   src: "https://avatars2.githubusercontent.com/u/132554",
 };
 
-export const initials = () => (
+export const Initials = (args) => (
   <div>
     <Avatar username="Tom Coleman" />
     <Avatar username="Dominic Nguyen" />
@@ -36,7 +36,7 @@ export const initials = () => (
   </div>
 );
 
-export const loading = (args) => (
+export const Loading = (args) => (
     <div>
       <Avatar {...args} size="large" />
       <Avatar {...args} size="medium" />
@@ -44,11 +44,11 @@ export const loading = (args) => (
       <Avatar {...args} size="tiny" />
     </div>
   );
-  loading.args = {
+  Loading.args = {
     loading: true,
   };
 
-export const large = () => (
+export const Large = (args) => (
   <div>
     <Avatar loading size="large" />
     <Avatar size="large" username="Tom Coleman" />

@@ -19,7 +19,7 @@ export default {
   component: Link,
 };
 
-export const all = () => (
+export const All = (args) => (
   <div>
     <Link href="https://learnstorybook.com">Default</Link>
     <br />

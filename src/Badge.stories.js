@@ -7,7 +7,7 @@ export default {
   component: Badge,
 };
 
-export const allBadges = (args) =>(
+export const AllBadges = (args) =>(
   <div>
     <Badge status="positive">Positive</Badge>
     <Badge status="negative">Negative</Badge>
@@ -20,29 +20,29 @@ export const allBadges = (args) =>(
     </Badge>
   </div>
 );
-allBadges.args={
+AllBadges.args={
   icon:'facehappy',
   inline:true
 }
 
-allBadges.storyName = "all badges";
+AllBadges.storyName = "all badges";
 
-export const positive = () => <Badge status="positive">Positive</Badge>;
-export const negative = () => <Badge status="negative">Negative</Badge>;
-export const warning = () => <Badge status="warning">Warning</Badge>;
-export const neutral = () => <Badge status="neutral">Neutral</Badge>;
-export const error = () => <Badge status="error">Error</Badge>;
+export const Positive = () => <Badge status="positive">Positive</Badge>;
+export const Negative = () => <Badge status="negative">Negative</Badge>;
+export const Warning = () => <Badge status="warning">Warning</Badge>;
+export const Neutral = () => <Badge status="neutral">Neutral</Badge>;
+export const Error = () => <Badge status="error">Error</Badge>;
 
-export const withIcon = (args) => (
+export const WithIcon = (args) => (
   <Badge {...args}>
     <Icon {...args}/>
     with icon
   </Badge>
 );
-withIcon.args = {
+WithIcon.args = {
   status: "warning",
   icon: "check",
   inline: true,
 };
 
-withIcon.storyName = "with icon";
+WithIcon.storyName = "with icon";
