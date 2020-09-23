@@ -23,3 +23,42 @@ Short.args = {
     },
   ],
 };
+
+export const SmallSize = Template.bind({});
+SmallSize.args = {
+  users: Short.args.users,
+  size: 'small',
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  loading: true,
+};
+
+export const Ellipsized = Template.bind({});
+Ellipsized.args = {
+  users: [
+    ...Short.args.users,
+    {
+      id: '3',
+      name: 'Zoltan Olah',
+      avatarUrl: 'https://avatars0.githubusercontent.com/u/81672',
+    },
+    {
+      id: "4",
+      name: "Tim Hingston",
+      avatarUrl: 'https://avatars3.githubusercontent.com/u/1831709',
+    },
+  ],
+};
+
+export const BigUserCount = Template.bind({});
+BigUserCount.args = {
+  users: Ellipsized.args.users,
+  userCount: 100,
+};
+
+export const Empty = Template.bind({});
+Empty.args = {
+  users: [],
+};
