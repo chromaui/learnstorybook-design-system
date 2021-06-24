@@ -5,6 +5,9 @@ import { Avatar } from "./Avatar";
 export default {
   title: "Design System/Avatar",
   component: Avatar,
+  parameters: {
+    componentSubtitle: 'Displays an image that represents a user or organization',
+  },
 };
 
 export const Standard = (args) => <Avatar {...args} />;
@@ -12,6 +15,11 @@ Standard.args = {
   size: "large",
   username: "Tom Coleman",
   src: "https://avatars2.githubusercontent.com/u/132554",
+};
+Standard.parameters = {
+  docs: {
+    storyDescription: 'The standard Avatar component.',
+  },
 };
 
 export const Sizes = (args) => (
@@ -26,6 +34,11 @@ Sizes.args = {
   username: "Tom Coleman",
   src: "https://avatars2.githubusercontent.com/u/132554",
 };
+Sizes.parameters = {
+  docs: {
+    storyDescription: '4 sizes are supported.',
+  },
+};
 
 export const Initials = (args) => (
   <div>
@@ -35,18 +48,28 @@ export const Initials = (args) => (
     <Avatar username="Michael Shilman" />
   </div>
 );
+Initials.parameters = {
+  docs: {
+    storyDescription: 'Shows the initials of the names',
+  },
+};
 
 export const Loading = (args) => (
-    <div>
-      <Avatar {...args} size="large" />
-      <Avatar {...args} size="medium" />
-      <Avatar {...args} size="small" />
-      <Avatar {...args} size="tiny" />
-    </div>
-  );
-  Loading.args = {
-    loading: true,
-  };
+  <div>
+    <Avatar {...args} size="large" />
+    <Avatar {...args} size="medium" />
+    <Avatar {...args} size="small" />
+    <Avatar {...args} size="tiny" />
+  </div>
+);
+Loading.args = {
+  loading: true,
+};
+Loading.parameters = {
+  docs: {
+    storyDescription: 'Shows the loading state in various sizes.',
+  },
+};
 
 export const Large = (args) => (
   <div>
@@ -59,12 +82,22 @@ export const Large = (args) => (
     />
   </div>
 );
+Large.parameters = {
+  docs: {
+    storyDescription: 'Shows a large Avatar with different items.',
+  },
+};
 
 const Template = (args) => <Avatar {...args} />;
 export const Controls = Template.bind({});
-Controls.args={
+Controls.args = {
   loading: false,
   size: 'tiny',
   username: 'Dominic Nguyen',
-  src:'https://avatars2.githubusercontent.com/u/263385'
-}
+  src: 'https://avatars2.githubusercontent.com/u/263385'
+};
+Controls.parameters = {
+  docs: {
+    storyDescription: 'Avatar component using Controls.',
+  },
+};
