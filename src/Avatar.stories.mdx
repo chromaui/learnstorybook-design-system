@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 import { Avatar } from "./Avatar";
 
@@ -54,16 +54,20 @@ The user's name should _always_ be present when using Avatar – either printed 
 
 export const Template = (args) => <Avatar {...args} />;
 
-<Story
-  name="standard"
-  args={{
-    size: "large",
-    username: "Tom Coleman",
-    src: "https://avatars2.githubusercontent.com/u/132554",
-  }}
->
-  {Template.bind({})}
-</Story>
+<Canvas>
+  <Story
+    name="standard"
+    args={{
+      size: "large",
+      username: "Tom Coleman",
+      src: "https://avatars2.githubusercontent.com/u/132554",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="standard" />
 
 ### Sizes
 
