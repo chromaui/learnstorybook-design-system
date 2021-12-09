@@ -74,6 +74,7 @@
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.4.9",
     "@storybook/testing-library": "^0.0.7",
+    "auto": "^10.32.3",
     "chromatic": "^6.2.0",
     "cross-env": "^7.0.3",
     "prettier": "^2.5.1"
