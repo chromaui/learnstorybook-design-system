@@ -51,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.4.9",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-interactions": "^6.4.9",
