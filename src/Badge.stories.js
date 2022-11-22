@@ -7,7 +7,7 @@ export default {
   component: Badge,
 };
 
-export const AllBadges = (args) =>(
+export const AllBadges = (args) => (
   <div>
     <Badge status="positive">Positive</Badge>
     <Badge status="negative">Negative</Badge>
@@ -20,12 +20,12 @@ export const AllBadges = (args) =>(
     </Badge>
   </div>
 );
-AllBadges.args={
-  icon:'facehappy',
-  inline:true
-}
+AllBadges.args = {
+  icon: 'facehappy',
+  inline: true,
+};
 
-AllBadges.storyName = "all badges";
+AllBadges.storyName = 'all badges';
 
 export const Positive = () => <Badge status="positive">Positive</Badge>;
 export const Negative = () => <Badge status="negative">Negative</Badge>;
@@ -35,14 +35,14 @@ export const Error = () => <Badge status="error">Error</Badge>;
 
 export const WithIcon = (args) => (
   <Badge {...args}>
-    <Icon {...args}/>
+    <Icon {...args} />
     with icon
   </Badge>
 );
 WithIcon.args = {
-  status: "warning",
-  icon: "check",
+  status: 'warning',
+  icon: 'check',
   inline: true,
 };
 
-WithIcon.storyName = "with icon";
+WithIcon.storyName = 'with icon';
