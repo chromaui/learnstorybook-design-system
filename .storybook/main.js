@@ -6,6 +6,7 @@ const config = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
+    '@storybook/addon-coverage',
   ],
   framework: {
     name: '@storybook/react-vite',
