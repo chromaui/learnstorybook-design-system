@@ -15,7 +15,9 @@
     "clean": "rimraf ./dist",
     "prebuild": "yarn clean",
     "release": "yarn build && auto shipit",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
@@ -29,6 +31,14 @@
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.3",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
     "@vitejs/plugin-react": "^3.1.0",
     "auto": "^10.3.0",
     "boxen": "^5.0.1",
@@ -43,6 +53,7 @@
     "rollup": "^3.25.0",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "storybook": "^7.5.3",
     "vite": "^4.1.4",
     "zx": "^1.14.1"
   },
