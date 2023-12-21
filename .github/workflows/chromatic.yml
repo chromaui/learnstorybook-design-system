@@ -5,7 +5,27 @@ on: push
 
 # What the action will do
 jobs:
-  test:
+  # Run interaction tests
+  interaction-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          #👇 Sets the version of Node.js to use
+          node-version: 16
+      - name: Install dependencies
+        run: yarn
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Build Storybook
+        run: yarn build-storybook --quiet
+      - name: Serve Storybook and run tests
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "npx http-server storybook-static --port 6006 --silent" \
+            "npx wait-on tcp:6006 && yarn test-storybook"
+  visual-tests:
     # The operating system it will run on
     runs-on: ubuntu-latest
     # The list of steps that the action will go through
