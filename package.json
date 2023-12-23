@@ -1,7 +1,10 @@
 {
-  "name": "learnstorybook-design-system-template",
+  "name": "learnstorybook-design-system",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Storybook design systems tutorial",
+  "repository": "https://github.com/chromaui/learnstorybook-design-system.git",
+  "author": "Tom Coleman <tom@thesnail.org>",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
