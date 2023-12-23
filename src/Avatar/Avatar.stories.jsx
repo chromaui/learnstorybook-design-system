@@ -3,11 +3,6 @@ import { Avatar } from './Avatar';
 export default {
   title: 'Design System/Avatar',
   component: Avatar,
-  tags: ['autodocs'],
-  parameters: {
-    componentSubtitle:
-      'Displays an image that represents a user or organization',
-  },
   /*
    * More on Storybook argTypes at:
    * https://storybook.js.org/docs/react/api/argtypes
